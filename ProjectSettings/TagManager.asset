@@ -7,6 +7,8 @@ TagManager:
   - Floor
   - Items
   - Egg
+  - Wall
+  - Save Point
   layers:
   - Default
   - TransparentFX

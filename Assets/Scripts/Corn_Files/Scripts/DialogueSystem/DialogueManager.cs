@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour
 {
     public DialogueData dialogueData;
+    public GameObject dialogueIO;
     public Image speakerImage;
     public Text speakerNameText;
     public Text dialogueText;
@@ -17,7 +18,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        DisplayLine();
+        //DisplayLine();
     }
 
     void Update()
@@ -28,8 +29,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void DisplayLine()
+    public void DisplayLine()
     {
+        dialogueIO.SetActive(true);
         if (currentLineIndex >= dialogueData.lines.Count)
         {
             Debug.Log("¹ï¸Üµ²§ô");

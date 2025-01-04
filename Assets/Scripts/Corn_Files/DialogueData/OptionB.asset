@@ -13,9 +13,24 @@ MonoBehaviour:
   m_Name: OptionB
   m_EditorClassIdentifier: 
   lines:
-  - speaker: BBBBBBBB
+  - speaker: "\u879E\u87FB"
     image: {fileID: 0}
     voice: {fileID: 0}
-    text: BBBBBBBBBBB
+    text: "\u7E7C\u7E8C\u524D\u9032\u5427"
     hasOptions: 0
     options: []
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5460733546131285554, guid: e9380965151eb9b4dad1371e24463eda, type: 3}
+          m_TargetAssemblyTypeName: DialogueEvent, Assembly-CSharp
+          m_MethodName: TranslateTo
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2868719714317464069, guid: 40b16ba5bf665a3468e186fae9b51bb2, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

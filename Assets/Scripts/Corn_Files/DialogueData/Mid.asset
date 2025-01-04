@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9cba8be983cbaf4b9531d61d0e1cf8a, type: 3}
+  m_Name: Mid
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: "\u879E\u87FB"
+    image: {fileID: 0}
+    voice: {fileID: 0}
+    text: "\u524D\u9762\u6709\u4E09\u689D\u9053\u8DEF\u6B38"
+    hasOptions: 0
+    options: []
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - speaker: "\u879E\u87FB"
+    image: {fileID: 0}
+    voice: {fileID: 0}
+    text: "\u6211\u8A72\u9078\u64C7\u54EA\u4E00\u689D\u8DEF\u5462\uFF1F"
+    hasOptions: 1
+    options:
+    - optionText: "\u5145\u6EFF\u9999\u8549\u7684\u8DEF"
+      nextBranch: {fileID: 11400000, guid: efccc2e4e46f9a548817f5576add9d20, type: 2}
+    - optionText: "\u5145\u6EFF\u751C\u751C\u5708\u7684\u8DEF"
+      nextBranch: {fileID: 11400000, guid: a8a3ff9f4a0e8f34d8e7b767c8941e76, type: 2}
+    - optionText: "\u50B3\u4F86\u566A\u97F3\u7684\u8DEF"
+      nextBranch: {fileID: 11400000, guid: b9024f5887beb6c459afd706dadd2506, type: 2}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
