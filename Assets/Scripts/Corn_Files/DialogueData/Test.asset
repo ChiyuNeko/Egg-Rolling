@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9cba8be983cbaf4b9531d61d0e1cf8a, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: Ebow
+    image: {fileID: 21300000, guid: 3c95bcd98afdb054c924d8e03cc347c5, type: 3}
+    voice: {fileID: 0}
+    text: "\u6211\u662F\u7CD6\u5C3F\u75C5"
+    hasOptions: 0
+    options:
+    - optionText: "\u771F\u7684\u5047\u7684"
+      nextBranch: {fileID: 0}
+    - optionText: "\u5594\u6211\u4E5F\u662F\u6B38"
+      nextBranch: {fileID: 0}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2877461663726465977, guid: f78dff935e567834299b641dec6d2ae6, type: 3}
+          m_TargetAssemblyTypeName: Test, Assembly-CSharp
+          m_MethodName: test
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - speaker: Mini
+    image: {fileID: 21300000, guid: b53b6efa17bf77b4280e57057b8cb086, type: 3}
+    voice: {fileID: 0}
+    text: "\u662F\u53C8\u600E\u6A23"
+    hasOptions: 0
+    options: []
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2877461663726465977, guid: f78dff935e567834299b641dec6d2ae6, type: 3}
+          m_TargetAssemblyTypeName: Test, Assembly-CSharp
+          m_MethodName: test
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - speaker: "\u96EA\u7CD5"
+    image: {fileID: 21300000, guid: 17196eedfd5aa32469abe295a1abc5b1, type: 3}
+    voice: {fileID: 0}
+    text: "\u6211\u611B\u6155\u865B\u69AE\u5566\uFF01"
+    hasOptions: 0
+    options: []
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - speaker: "\u8303\u59DC\u6631\u4EFB"
+    image: {fileID: 21300000, guid: e694f1580cb038e49b93afc6908c63dc, type: 3}
+    voice: {fileID: 8300000, guid: 3f386776eb40b3544ae5a1623863f15a, type: 3}
+    text: "\u4E0D\u662F\u8AAA\u597D\u8981\u7D44\u4E00\u8F29\u5B50\u7684\u6A02\u5718\u55CE\uFF0C\u600E\u9EBC\u641E\u6210\u9019\u6A23"
+    hasOptions: 0
+    options: []
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - speaker: "\u6B66\u7693\u6587"
+    image: {fileID: 21300000, guid: 4f15168a99f5eb84e94fbbb454a230ee, type: 3}
+    voice: {fileID: 0}
+    text: "\u6211\u5F9E\u4F86\u5C31\u4E0D\u89BA\u5F97\u7D44\u5718\u958B\u5FC3\u904E"
+    hasOptions: 0
+    options: []
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - speaker: "\u76E7\u6631\u6FC0"
+    image: {fileID: 21300000, guid: 4f9c8ed4b09729140801e03c1ff91c55, type: 3}
+    voice: {fileID: 8300000, guid: 53f91f6bf5445724f8b4ab1e049bfd77, type: 3}
+    text: "\u767B\u767B\u767B\u767B\u767B"
+    hasOptions: 1
+    options:
+    - optionText: "\u4F60\u662F\u767B\u767B\u767B\u767B\u767B\u73A9\u5BB6\uFF1F"
+      nextBranch: {fileID: 11400000, guid: efccc2e4e46f9a548817f5576add9d20, type: 2}
+    - optionText: "\u4F60\u662F\u539F\u795E\u73A9\u5BB6\uFF1F"
+      nextBranch: {fileID: 11400000, guid: 4cd0a30c5a9683844903dd98a0757c53, type: 2}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []

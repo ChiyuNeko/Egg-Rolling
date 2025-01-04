@@ -45,6 +45,7 @@ public class FallDown : MonoBehaviour
 
         // Instantiate the prefab
         GameObject newObject = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+        Destroy(newObject, 5);
 
         if (!newObject.GetComponent<StopOnCollision>())
         {

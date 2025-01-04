@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9cba8be983cbaf4b9531d61d0e1cf8a, type: 3}
+  m_Name: Test 1
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: Ebow
+    image: {fileID: 21300000, guid: 3c95bcd98afdb054c924d8e03cc347c5, type: 3}
+    voice: {fileID: 0}
+    text: "\u6211\u662F\u7CD6\u5C3F\u75C5"
+    hasOptions: 0
+    options:
+    - optionText: "\u771F\u7684\u5047\u7684"
+      nextBranch: {fileID: 0}
+    - optionText: "\u5594\u6211\u4E5F\u662F\u6B38"
+      nextBranch: {fileID: 0}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
