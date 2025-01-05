@@ -7,6 +7,7 @@ public class PlayerSensor : MonoBehaviour
     public float force;
     public Rigidbody Egg;
     public bool flag = false;
+
     // Start is called before the first frame update
     void Start()
     {
