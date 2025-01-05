@@ -12,4 +12,16 @@ public class EffectsManager : MonoBehaviour
     {
         Debug.Log("§Ú¬O²y¡I");
     }
+    public void IronEgg()
+    {
+        Debug.Log("¿û³J");
+        GameObject Egg = GameObject.FindGameObjectsWithTag("Egg")[0];      
+        Egg.transform.tag = "Iron Egg";
+    }
+    public void Boom()
+    {
+        Debug.Log("¬µ¼u");
+        GameObject Egg = GameObject.FindGameObjectsWithTag("Egg")[0];      
+        Egg.GetComponent<Rigidbody>().AddForce(Vector3.back * 100);
+    }
 }

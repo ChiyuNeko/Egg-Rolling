@@ -41,7 +41,7 @@ public class PlayerSensor : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Egg")
+        if(other.tag == "Egg Collider")
         {
             flag = true;
         }

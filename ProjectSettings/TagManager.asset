@@ -9,6 +9,10 @@ TagManager:
   - Egg
   - Wall
   - Save Point
+  - Clear
+  - Iron Egg
+  - Rocket
+  - Egg Collider
   layers:
   - Default
   - TransparentFX

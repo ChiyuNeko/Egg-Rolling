@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using EggContent;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class EggManager : MonoBehaviour
 {
     public PlayerSensor playerSensor;
     public Follow follow;
+    public EffectsManager effectsManager;
     public EggContent.Egg egg = new Egg();
     public GameObject RespawnPoint;
+    public List<Collider> ClearPoint = new List<Collider>();
+    public Text ClearText;
     public UnityEvent BrokenEvent;
+    public UnityEvent ClearEvent;
     public bool CanBroken;
     public bool broken;
+    public bool clear;
+    public bool Iron{get; set;}
     void Start()
     {
         //RespawnPoint = egg.EggObject;
@@ -21,11 +28,14 @@ public class EggManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(egg.EggRigidbody.velocity.magnitude > 3)
+        if(egg.EggObject.tag == "Iron Egg")
         {
-            if(egg.EggObject.transform.tag == "Egg");
-                CanBroken = true;
+            StartCoroutine(IronEggTimer());
+        }
+        
+        if((egg.EggRigidbody.velocity.magnitude > 3) && egg.EggObject.transform.tag == "Egg")
+        {
+            CanBroken = true;
         }
         else
         {
@@ -52,10 +62,37 @@ public class EggManager : MonoBehaviour
             if(!broken)
             {
                 Debug.Log("Broken");
+                Debug.Log(other.transform.name);
                 Respawn(RespawnPoint);
-                broken =true;
+                broken = true;
             }
-
+        }
+        if(other.transform.tag == "Rocket")
+        {
+            if(gameObject.transform.tag == "Egg")
+            {
+                Respawn(RespawnPoint);
+                broken = true;
+            }
+        }
+        if(other.transform.tag == "Clear" && !broken && !clear)
+        {
+            if(other.collider == ClearPoint[0])
+            {
+                ClearEvent?.Invoke();
+                ClearText.text = "你把蛋推進火爐裡煮熟了";
+            }
+            if(other.collider == ClearPoint[1])
+            {
+                ClearEvent?.Invoke();
+                ClearText.text = "你成功把蛋送回家吃上大餐了";
+            }
+            if(other.collider == ClearPoint[2])
+            {
+                ClearEvent?.Invoke();
+                ClearText.text = "蛋掉進馬桶裡被沖走了";
+            }
+            clear = true;
         }
 
     }
@@ -66,5 +103,11 @@ public class EggManager : MonoBehaviour
             RespawnPoint = other.gameObject;
         }
         
+    }
+
+    public IEnumerator IronEggTimer()
+    {
+        yield return new WaitForSeconds(3);
+        egg.EggObject.tag = "Egg";
     }
 }

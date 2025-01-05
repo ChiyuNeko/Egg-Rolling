@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -72,6 +73,10 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("Walk", false);
             rigidbody.velocity = new Vector3(0, rigidbody.velocity.y, 0);
+        }
+        if (Input.GetKeyUp(KeyCode.F5))
+        {
+            SceneManager.LoadScene("RollEgg");
         }
     }
 }
